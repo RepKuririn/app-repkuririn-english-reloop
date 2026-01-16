@@ -2,25 +2,43 @@
 
 A YouTube subtitle learning tool for language learners. Loop specific segments, save favorite phrases, and organize them into groups.
 
-## Quick Start
+## Installation
+
+### 1. Clone the Repository
 
 ```bash
-# Install dependencies
-npm install
+git clone https://github.com/RepKuririn/app-repkuririn-english-reloop.git
+cd app-repkuririn-english-reloop
+```
 
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Build the Extension
+
+```bash
+npm run build
+```
+
+### 4. Load in Chrome
+
+1. Open Chrome and navigate to `chrome://extensions/`
+2. Enable "Developer mode" (top right toggle)
+3. Click "Load unpacked"
+4. Select the `dist` folder from this project
+
+### Development Commands
+
+```bash
 # Build for development
 npm run build
 
 # Type check
 npm run typecheck
 ```
-
-## Loading the Extension in Chrome
-
-1. Open Chrome and navigate to `chrome://extensions/`
-2. Enable "Developer mode" (top right toggle)
-3. Click "Load unpacked"
-4. Select the `dist` folder from this project
 
 ## Development Status
 
@@ -73,7 +91,7 @@ npm run typecheck
 ## Project Structure
 
 ```
-subtitle-loop/
+app-repkuririn-english-reloop/
 ├── src/
 │   ├── types/          # TypeScript type definitions
 │   ├── content/        # Content scripts (injected into YouTube)
@@ -81,8 +99,7 @@ subtitle-loop/
 │   ├── popup/          # Extension popup
 │   └── options/        # Options/library page
 ├── public/icons/       # Extension icons
-├── dist/               # Build output (load this in Chrome)
-└── spec/               # Technical specifications
+└── dist/               # Build output (load this in Chrome)
 ```
 
 ## Technology Stack
