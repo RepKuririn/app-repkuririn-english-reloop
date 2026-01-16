@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtitle Loop - ライブラリ</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>📝 Subtitle Loop ライブラリ</h1>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar: Groups -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h2>グループ</h2>
+          <button class="btn btn-icon" id="add-group" title="グループを追加">
+            ➕
+          </button>
+        </div>
+
+        <nav class="group-list" id="group-list">
+          <!-- Populated by JS -->
+        </nav>
+      </aside>
+
+      <!-- Main: Phrases -->
+      <main class="main" id="main">
+        <div class="main-header">
+          <h2 id="current-group-name">すべてのフレーズ</h2>
+          <span class="phrase-count" id="phrase-count"></span>
+        </div>
+
+        <div class="phrase-list" id="phrase-list">
+          <!-- Populated by JS -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Group Form Modal -->
+  <div class="modal-overlay" id="group-modal" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="group-modal-title">グループを作成</h3>
+        <button class="btn btn-icon" data-action="close-modal">✕</button>
+      </div>
+      <form id="group-form">
+        <div class="modal-body">
+          <div class="form-field">
+            <label for="group-name">名前</label>
+            <input type="text" id="group-name" required>
+          </div>
+          <div class="form-field">
+            <label for="group-description">説明（任意）</label>
+            <textarea id="group-description" rows="2"></textarea>
+          </div>
+          <div class="form-field">
+            <label>色</label>
+            <div class="color-picker" id="color-picker">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-action="close-modal">
+            キャンセル
+          </button>
+          <button type="submit" class="btn btn-primary">
+            保存
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Phrase Detail Modal -->
+  <div class="modal-overlay" id="phrase-modal" hidden>
+    <div class="modal modal-wide">
+      <div class="modal-header">
+        <h3>フレーズ詳細</h3>
+        <button class="btn btn-icon" data-action="close-phrase-modal">✕</button>
+      </div>
+      <div class="modal-body" id="phrase-detail">
+        <!-- Populated by JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" id="delete-phrase">
+          🗑️ 削除
+        </button>
+        <button type="button" class="btn btn-primary" id="play-phrase">
+          ▶️ 再生
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./index.ts"></script>
+</body>
+</html>

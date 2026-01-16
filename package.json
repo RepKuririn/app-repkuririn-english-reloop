@@ -1,0 +1,26 @@
+{
+  "name": "subtitle-loop",
+  "version": "0.1.0",
+  "description": "YouTube subtitle loop practice tool",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dexie": "^4.2.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.3.0",
+    "@types/chrome": "^0.1.33",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
